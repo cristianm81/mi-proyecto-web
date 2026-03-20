@@ -1,0 +1,104 @@
+
+/* Media para versión escritorio */
+
+@media (min-width: 900px) and (max-width: 1700px){
+    .movil{
+        display:none;
+    }
+
+    .tablet{
+        display:none;
+    }
+
+    .banner-text2 {
+        width: 50%; /* Reduce aún más el ancho del contenido para pantallas grandes */
+    }
+
+}
+/* Media para versión tablet */
+
+@media (min-width: 768px) and (max-width: 899px){
+    .escritorio{
+        display:none;
+    }
+
+    .movil{
+        display:none;
+    }
+
+}
+
+
+/* Media para versión movil */
+
+@media (min-width: 360px) and (max-width: 767px){
+
+    .escritorio{
+        display:none;
+    }
+
+    .tablet{
+        display:none;
+    }
+
+    /* banner 2 */
+    .banner2{
+        width: 100%;
+
+    }
+    .banner-text2 {
+        width: 80%;
+        transform: translate(-60%, -20%);
+    }
+
+    .banner-text2 h2{
+        font-size: 24px;
+    }
+/* fin banner2 */
+
+/* banner 1 */
+
+    .banner{
+        width: 100%;
+        height: 200px;
+
+    }
+    .banner-text {
+        width: 90%; 
+    }
+
+    .banner-image{
+
+    }
+    .banner-text h1 {
+        font-size: 18px; 
+    }
+
+    .banner-text h4 {
+        font-size: 12px; 
+    }
+
+    .banner-boton {
+        margin-top: 1rem;
+        
+
+    }
+
+    .banner-button{
+        padding: 5px;
+        width: 100px;
+        font-size: 14px;
+        
+    }
+
+/* fin banner 1 */
+    
+/* cabecera */
+
+}
+
+
+
+
+
+

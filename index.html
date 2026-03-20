@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRETTY SPA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaq.css">
+</head>
+
+<body>
+
+    <section class="menu-hamb movil">
+      
+        
+        <input type="checkbox" id="menu-toggle" class="movil">
+            <label for="menu-toggle" class="menu-btn">
+                <div class="logo-hambur">
+                    <img src="img/logo-prettyspa.svg" alt="">
+                </div>
+                <div class="lineas">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>               
+            </label>
+
+    </section>
+  
+      <header class="cabecera escritorio">
+          <div class="logo-master">
+              <img src="img/logo-prettyspa.svg" alt="Logo">
+          </div>
+          <nav class="navbar">
+              <ul>
+                  
+                  <li><a href="#" class="nav-item"><img src="img/service.svg" alt="Servicios" class="nav-icon"> SERVICIOS</a></li>
+                  <li><a href="#" class="nav-item"><img src="img/reservar.svg" alt="Reservas" class="nav-icon"> RESERVAR</a></li>
+                  <li><a href="#" class="nav-item"><img src="img/Porcentaje.svg" alt="Promociones" class="nav-icon"> PROMOCIONES</a></li>
+                  <!-- Redes sociales -->
+                   <div class="social-icon">
+                  <a href="#" class="nav-social"><img src="img/perfil.svg" alt="linkedin" class="social-icon"></a>
+                  
+                    </div>
+                 
+              </ul>
+          </nav>
+      </header>
+
+      <div class="mySlides fade">
+        <div class="contenedor-botonbanner">
+            <img src="img/banner1a.jpg" style="width:100%">
+            <div class="texto-banner"></div>
+                
+                <a href="#" class="btn">AGENDA TU HORA</a>
+            </div>
+        </div>
+    </div>
+    
+   
+      <div class="mySlides fade">
+        <div class="contenedor-botonbanner">
+          <img src="img/banner2.jpg" style="width:100%">
+          
+          <a href="#"><button class="btn">AGENDA TU HORA</button></a></div>
+      </div>
+   
+      <div class="mySlides fade">
+        <div class="contenedor-botonbanner">
+          <img src="img/banner3.jpg" style="width:100%">
+          <a href="#"><button class="btn">AGENDA TU HORA</button></a></div>
+      </div>
+   
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+   
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div> 
+          </section>
+  
+   <div class="cartelera"> <h1> MÁS SERVICIOS</h1> </div>
+    
+    <div class="cards-container">
+   
+      <div class="card">
+     
+          <img src="img/1.jpg" alt="Card Image 1" class="card-image">
+          <div class="card-content">
+              <h2> TRATAMIENTOS <br>FACIALES</h2>
+              <div class="card-boton"><a href="#" class="card-button">VER MÁS</a></div>
+          </div>
+      </div>
+      <div class="card">
+          <img src="img/2.jpg" alt="Card Image 2" class="card-image">
+          <div class="card-content">
+              <h2>PRODUCTOS <br> ÚNICOS</h2>
+              <div class="card-boton"><a href="#" class="card-button">VER MÁS</a></div>
+          </div>
+      </div>
+      <div class="card">
+          <img src="img/3.jpg" alt="Card Image 3" class="card-image">
+          <div class="card-content">
+              <h2>NAILS</h2>
+              <div class="card-boton"><a href="#" class="card-button">VER MÁS</a></div> 
+          </div>
+      </div>
+  </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="logo-footer">
+            <img src="img/logo-prettyspa.svg" alt="PrettySpa">
+        </div>
+        <div class="footer-links">
+            <h3>CONTACTO</h3>
+            <ul>
+                <li><a href="#">Cel. +56 9 8444 025</a></li>
+                <li><a href="#">Ubicación</a></li>
+                <li><a href="#">Correo</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  </body>
+</html>

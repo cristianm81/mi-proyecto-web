@@ -1,0 +1,583 @@
+
+body {
+    font-family: "Roboto";
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color:#EBF6FF ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-master img {
+    width: 120px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea la navbar a la derecha */
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #20002F;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.navbar ul li a:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+   
+}
+
+.navbar ul li a:not(.nav-social)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0091FF;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+}
+
+.navbar ul li a:hover:not(.linkedin-icon)::after {
+    transform: scaleX(1);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.nav-item:hover {
+    transform: scale(1.3); /* Agrandar el icono en 1.3 veces su tamaño original */
+    transition: transform 0.3s ease; /* Añadir una transición suave */
+}
+
+.nav-social:hover {
+    transform: scale(1.2); /* Agrandar el icono en 1.3 veces su tamaño original */
+    transition: transform 0.3s ease; /* Añadir una transición suave */
+}
+
+
+/* Estilos del botón de hamburguesa */
+
+.menu-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+
+   
+}
+
+.logo-hambur {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.lineas{
+    width: 100%;
+
+}
+
+.btn-line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    margin-left: 380px;
+    margin-right: 10px;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Color de fondo del menú */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items ul li {
+    padding: 10px;
+}
+
+.menu-items ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu-toggle:checked + .menu-btn .btn-line:nth-child(1),
+#menu-toggle:checked + .menu-btn .btn-line:nth-child(3) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-btn .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-items {
+    display: block;
+}
+
+#menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+.content {
+    padding: 20px;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.banner-boton {
+    margin-top: 2rem;
+    
+}
+
+.banner-button {
+    background-color: #0091FF;
+    color: white;
+    padding: 10px 40px;
+    left: 5%;
+    width: 200px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Agregamos transform a la transición */
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2); ;
+}
+
+.banner-button:hover {
+    background-color: #00345c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+ 
+} */
+
+/* Banner */
+* {box-sizing:border-box}
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    width: 100%; /* Ajusta el ancho al 100% */
+    height: 200px;
+    position: relative;
+    margin: auto;
+  }
+
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Botones banner */
+
+
+.contenedor-botonbanner{
+    position: relative;
+    
+}
+.contenedor-botonbanner .btn {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #0091FF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgb(134, 134, 134);
+}
+
+
+/* Make the image responsive */
+.contenedor-botonbanner img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Botones banner */
+.contenedor-botonbanner {
+    position: relative;
+}
+
+.contenedor-botonbanner .btn {
+    margin-left: 0.5px;
+    margin-top: 5px;
+    background-color: #0091FF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgb(134, 134, 134);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.contenedor-botonbanner .btn:hover {
+    background-color: #f1c232;
+    color: #ffffff;
+
+}
+/* Make the image responsive */
+.contenedor-botonbanner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Fin banner */
+
+
+/* titulo Card */
+
+.cartelera {
+    margin-top: 50px;
+    margin-left: 5%;
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: #00345c;
+    width: 80%; /* Ajuste el ancho del texto para pantallas más grandes */
+    max-width: 600px; /* Ancho máximo del texto */
+}
+
+
+/* Estilos para las cards */
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+    padding: 0 0 20px 0;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-content p {
+    font-size: 1em;
+    margin-bottom: 2em;
+    color: #666;
+    font-weight: 500;
+}
+
+.card-button {
+    background-color: #0091FF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    
+}
+
+.card-button:hover {
+    background-color: #f1c232;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); 
+}
+
+
+.card-boton:hover{
+    transform: scale(1.1); 
+    
+}
+/* Banner 2 */
+
+.banner2 {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+    margin-top: 50px;
+    
+}
+
+.banner2-image {
+    width: 100%;
+    height: 400px;
+    display: block;
+
+}
+
+.banner-text2 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 90%; 
+    max-width: 500px; 
+    border-radius: 10px;  
+    padding: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Alinear contenido al centro */
+}
+
+.project {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.project h2 {
+    font-size: 2.5em; 
+    margin-top: 2em;
+    color: #f1c232; 
+    text-align: left; /* Justificar texto a la izquierda */
+    margin-left: 30px; /* Pequeño margen a la izquierda */
+}
+
+
+/* animacion */
+
+#project {
+    width: 120px;
+    margin-right: 30px;
+    margin-top: 30px;
+    stroke: #f1c232;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: projectdibujado 4s ease-in forwards infinite; /* Añade 'infinite' para repetir infinitamente */
+}
+
+@keyframes projectdibujado {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Estilos generales del footer */
+.footer {
+    background: #152f44;
+    color: #ffffff; /* Color azul */
+    text-align: center;
+    padding: 40px 0; /* Aumenta el espacio interno superior e inferior */
+    font-weight: 400; /* Tipo de fuente regular */
+}
+
+/* Estilo para los encabezados h3 dentro del footer */
+.footer h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Color azul */
+    font-weight: 400; /* Tipo de fuente regular */
+}
+
+/* Estilo para las listas dentro del footer */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para los elementos de lista li dentro del footer */
+.footer li a {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: 400; /* Tipo de fuente regular */
+    font-size:14px;
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    margin-bottom: 8px;
+    color: #aaaaaa;
+    font-weight: 400; /* Tipo de fuente regular */
+    font-size: 14px;
+}
+
+/* Estilos para el contenedor principal del contenido del footer */
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de manera equitativa */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+}
+
+/* Estilos para el logo de la empresa en el footer */
+.logo-footer img {
+    width: 120px;
+    height: auto;
+}
+
+/* Estilos para las secciones individuales del footer (Preguntas Frecuentes, Contacto, Redes Sociales) */
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; /* Distribuye el espacio equitativamente entre las secciones */
+    margin: 0 20px; /* Espacio entre las secciones */
+}
+
+/* Estilos para la sección de Redes Sociales en el footer */
+.footer-social {
+    text-align: center; /* Alinea los iconos sociales al centro */
+}
